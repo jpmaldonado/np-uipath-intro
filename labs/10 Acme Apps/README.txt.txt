@@ -1,0 +1,9 @@
+- Go to 
+https://acme-test.uipath.com/first-automation
+
+- You will need to fill in your email. You require Outlook or Google Workspace for this exercise.
+- After inputing your email, you will receive several attachments. Your task is:
+1. Download attachments.
+2. For each file, look at the discount the client should get based on their ID. 
+3. Copy the discount and correct the invoice.
+4. Generate a PDF invoice and email it.
