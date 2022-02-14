@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1026.66666666667,1389.33333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1026.66666666667,1941.33333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
       <x:String>System.Activities</x:String>
@@ -27,6 +27,7 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Mail</x:String>
       <x:String>UiPath.Presentations</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -60,10 +61,11 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="562,1324.66666666667" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+  <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="562,1876.66666666667" sap2010:WorkflowViewState.IdRef="SequenceX_1">
     <ueab:SequenceX.Variables>
       <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
       <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
@@ -73,31 +75,31 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Find Unicorn Name" sap:VirtualizedContainerService.HintSize="520,1234.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="589175ad-fcf3-4cfb-a8d3-5995b10c0f0d" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Find Unicorn Name" sap:VirtualizedContainerService.HintSize="520,1786.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="589175ad-fcf3-4cfb-a8d3-5995b10c0f0d" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,971.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,1563.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="466,878.666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="data.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="466,1470.66666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="data.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,596.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,1188.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="412,504" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveAfterEachRow="False">
+                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="412,1096" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveAfterEachRow="False">
                       <ueab:ExcelForEachRowX.Body>
                         <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
                           <ActivityAction.Argument1>
@@ -106,7 +108,7 @@
                           <ActivityAction.Argument2>
                             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                           </ActivityAction.Argument2>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,311.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,903.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -116,13 +118,66 @@
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://www.rpasamples.com/findunicornname" DesignTimeRectangle="734, 274, 362, 42" ElementType="InputBox" FriendlyName="'INPUT txtName'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="fda54495-9a44-48db-92c3-da0e06a10eeb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAW4AAAAuCAYAAAAIjfNXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAK+SURBVHhe7dhRrptADIXhbjqLisQuWAZ7YAM8UJ0qg3xHnsHcpAGL/5OsBo/HvB3R+2cFAKRCcANAMj+Ce57ndRzHdRiG9fl8UhRFUSeWsliZrGy2tuDWgYamaVqXZXl1AQBnURYrk5XNNry34FaqawAAcC3KZmV0sQW3Ep0vbQC4HmWzMrrYglt/TwEAXJPNaIIbABIguAEgGYIbAJIhuAEgGYIbAJIhuAEgGYIbAJIhuAEgGYIbAJIhuAEgGYIbAJJ5O7gfj4dbv/HbewBwJx8J7k8huAFgH8ENAMn89+Au5/rXVu3Iea30ejPSOvP6peedideTul+ey57WPfFmW/N7M6XXmmv1rb1zAOf4SnDXM60waO3y7lutfR5vbm+/RGbEm2vN1rzZ1n1vzvLulV501qqfAZznI8Fdl1U/F14/2hPbb8149t7R2xWZq/u9fbXoTk/0vZH+0bsAvusrX9werx/tie23Zjyare9Gd0Xm6n5vXy26s1DfltW747H9o3cBfFeK4G5VYX9H9O72dkXeeWRfLbpT9t5zZJfYvn63CsD50n5xW5EZy87Xd3u7eveKI/tq7+yMvjfSb80AuIbbBrctq7fLnrXmjuyrvbMz+t5IvzUD4BouH9xS9/eeI3Qn+j7x3hntRbVm93bqeW+miPaj+wB830eC26vC/rZ6fe+s9L1zb36Pt8cq5705b6aerZ97WrNeX71S5dny7siRvnq2AFzD28GdFUEEICuCGwCSuWVw819/AJndKrhLYBPaADK75Rc3AGRGcANAMgQ3ACRDcANAMgQ3ACRDcANAMm5wD8OwLsvyegIAXIWyWRldbME9juM6TdPrCQBwFcpmZXSxBfc8z/8SXQN8eQPA+ZTFymRlszK62IJbdKBU15D+nkJRFEWdV8piZbINbfkR3ACA6yO4ASCVdf0LsgcPwuBlJbkAAAAASUVORK5CYII=" InformativeScreenshot="09230e48bccc52c1c2abb67334be3418.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Find Unicorn Name' /&gt;" SearchSteps="FuzzySelector, Image">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target DesignTimeRectangle="734, 248, 148, 21" ElementType="Text" FriendlyName="'What is your name?*'" FullSelectorArgument="&lt;webctrl aaname='What is your name?*' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='What is your name?*' tag='SPAN' type='' check:text='What is your name?*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJgAAAAZCAYAAADNLudcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAH8SURBVGhD7ZVRbsMwDEN3td7/UBk0gBvLUbbcxPmJHmAkImkHaIjm62iajXTBmq10wZqtdMGarXTBmq10wZqtdMGarVxWsNfr9bPu4M5nNef4LdjopWUe61lmB3c+q/n7vXkpTgumBYM+8vT+DFed01yHvg9+R7jnxbx9Il0g26iay3zCVec0+3DvKHtnpYLhyt5oxj37gD311VMfOI/3OD9Y0aE5L3C6ajyrx7icy7KnPmua4RmaUskAl8n2DAvG88gLMI8yivNnewLNuD3ZGU53e1nTOahomDWnuNxsX5avasyq5nS+Mm8FCzjEh/F9wPeB+oHTmE/2BJqp7AGzvTqDSq6ScbjcbK/6Ll/RXCZwepYdYQuGQ9wDcHXeisaLcZqiGcyqOzQzm0ElV8k4XG6k8QI6BxUNc7aAzlWWC8aLqWizOXCakmWgZz5gT3PZXtVdrpJxuJxqq3NQ0VzGUc0pacHcgRWPUW02B05TZpmq73JOC1R3uUrG4XKqrc5BRXOZK/lXsAAP1QdnejDKg9kcOE3RzBVnMOq5bJZx2gyXU211Ds5qjMtUGBbMkXlOH2m8lJEXqMd59TJmOT4ry6mvWZ0zXG6k8QI6B1UtgM6LcVoFW7An8OkP1qzx6II1+3lkwfrf6z4eVTAUq8t1H4/9RDb30AVrNnIc37vvqKmrt6qMAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
                                 </uix:TargetAnchorable>
                               </uix:NTypeInto.Target>
                             </uix:NTypeInto>
+                            <uix:NSelectItem DisplayName="Select Item 'What month'" sap:VirtualizedContainerService.HintSize="358,157.333333333333" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[CurrentRow.ByField(&quot;Month&quot;)]" ScopeIdentifier="589175ad-fcf3-4cfb-a8d3-5995b10c0f0d" Version="V1">
+                              <uix:NSelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="13">
+                                  <x:String>Select your birth month</x:String>
+                                  <x:String>January</x:String>
+                                  <x:String>February</x:String>
+                                  <x:String>March</x:String>
+                                  <x:String>April</x:String>
+                                  <x:String>May</x:String>
+                                  <x:String>June</x:String>
+                                  <x:String>July</x:String>
+                                  <x:String>August</x:String>
+                                  <x:String>September</x:String>
+                                  <x:String>October</x:String>
+                                  <x:String>November</x:String>
+                                  <x:String>December</x:String>
+                                </scg:List>
+                              </uix:NSelectItem.Items>
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.rpasamples.com/findunicornname" DesignTimeRectangle="734, 394, 356, 41" ElementType="DropDown" FriendlyName="'Select your birth month'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="16d74f12-749d-4dc2-ba4e-a645132bf844" InformativeScreenshot="52eb5f85637d02c5d8e4bee49bb078f8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Find Unicorn Name' /&gt;" SearchSteps="FuzzySelector">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="734, 368, 207, 21" ElementType="Text" FriendlyName="'What month'" FullSelectorArgument="&lt;webctrl aaname='What month were you born?' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='What month were you born?' tag='SPAN' type='' check:text='What month were you born?' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANMAAAAZCAYAAACrdBsLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKESURBVHhe7ZYBah1BDEN7tdz/UCkuKCiqPOMNJuQTPVi68yQvy6Ym+fMeQlghyxTCElmmEJbIMoWwRJYphCWyTCEskWUKYYm1ZXp7e/t3/XbyHXZ5pe/5sUynl+4y9l3nt5HvsMtP+p54F76Y6zJ1gwX7rvOUred8B+5dX+n9X4Gf9D1vP+tPf+a5F4frPHCdr7D1nO/Avesrvf8r8JO/p77baJnwL2enM+45B5xprpnmgDPt8hlOuXXYdz32nLt7nB0uf+pOmd4DOJcxXe48nMsK57su4Bz37JRbh/3tHucO7RyXic+nrMD51FFcfpsp0OHeyTFPOtMeA8fe9YDLJu7Wwb12Cue7btE9g9F5PRdTxyDnTjcz6cFNvOsVrlt8WqaCCzygw3xfaF44x3xlppjOqXOdYtLbdozmOKsDmgH2kw7T+UKz2xlMes4xXa5+u1c86RZ2mVDUAfYue+L4YpxTpnPqXKeY9LYdwznunQOcu4s7Cvfc5dDsdgaTnnNMl6vf7hVTBx4vE1/MxN3OhXPKdE6d6xST3rZjOOceO/V8dnSdyayDZ3S+e6Z613OO6XL1271i6kC7TG5okjHqbufCOWU6p851iklv2ynIuedcUWd1SteZzDow5+adK9S7nnNMl6vf7hVdt+O/ZSrwkO7h6otTH9zOhXPKdG7iJp1i2ynocM854Dyfu7niNtvx5Jmu23W0x7hONzPpOVdMu86B4zI5usz5k+NLOWWFy6augL/lzK2LzPWcU7rOaRYZX0DPCs/cuuDW42d1Pc1P3cJ1J/2u98RPHbDLFILj9B8pZJnCA7JIZ7JMYUR+K93JMoUjWKIs0p0sUwhLZJlCWOH9/S8hY7l0jug6IQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Get Unicorn Name'" sap:VirtualizedContainerService.HintSize="358,157.333333333333" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="589175ad-fcf3-4cfb-a8d3-5995b10c0f0d" Version="V1">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.rpasamples.com/findunicornname" DesignTimeRectangle="824, 484, 180, 44" ElementType="Button" FriendlyName="'Get Unicorn Name'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' aaname='Get Unicorn Name' check:text='Get Unicorn Name' /&gt;" Guid="ed4663cb-b544-495d-8aa4-75d256525294" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAAAwCAYAAACi0LByAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAALkSURBVHhe7Z3BjRRRDERJiDMhQCaEQJpcyQUY5MMb1Vr2756eaXbbqic9aezy31MJcetPN2MG44Kb0bwp+M9ff2/ff/y5ffvy+/b1s7XXMTob3Y0OK/eCR+Bi26sbHdaS3wse7a8eWHs1o8twL7j/9bZTjC7DveDVobVXFVxwO1Jwwe1IwQW3IwUX3I4UXHA7UnDB7UjBBbcjBRfcjhRccDtScMHtSMEFtyMFF/wBocrsxxL+S8E7qtuVUGUqVFkIVbYSquyjqVR5CFV2deHUgm9RvVkJVaZClYVQZVNUqjyEKru6cFrBlS6v9iuhylSoshCqbIqZ1U2VXV04veBV1plZZYHmKlRZCNWc4SbfVXs4mu/5DbzthPy7u6n2UGWruwz7vfkrhFMKDlXW2bHK9b0KVRZCnju6d93brTzYulm9Bf0bWdDfQXeTd5mtPHjmPfmrhP9a8Eze6221B72phCoLIc/Bnt3qRlUe3T16m4VuXu3yHOQ5qHZBdwvk+S7vnxE+VME78h1zJ1RZCN3c7aGbs7C1B705sldhtQO90b2SM73fu98iv31GeJf/okCeO7p3nVBlIXRzt4duzsLWHvTmyF6F1R6qPJNzfbN3v0V++4xwasGDVd7NnVBlKlRZCN3c7aGbs7C1B705sldhtYcq63agN3v3kG/OEE4peKh0WZ6DfJfnQHeVyp4M9K7aQ54DdqqyZ8d8dK/CKoO8r25XN3v3Sr7R+RXCaQUPt9hzu7rRLLtFdau7ag/VjbKVB9WN7o7sVaiyUKl2mXzD/Oi+Q9+8Qji14GHHntutmypXO7q7rT3oje7haP7sXoUqC5XVHnLOfGSf0exVwukFt/Y9BBfcjhRccDtScMHtSMEFtyMFF9yOFFxwO1Jwwe1IwQW3IwUX3I4UXHA7UrgX3B+hslMsP0LlzwjaKZafEfSHYO0Eo8Plh2CDCKL9Lrq9mtHZ6K6WO3hTcGOm4YKbwdxu/wAkImqxk2ze8gAAAABJRU5ErkJggg==" InformativeScreenshot="e1a6a4edfb62cb30c313dad1adddcf5f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Find Unicorn Name' /&gt;" SearchSteps="FuzzySelector, Image">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="734, 474, 360, 54" FriendlyName="'Get Unicorn Name'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' tag='DIV' check:text='Get Unicorn Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWwAAAA6CAYAAACUP2PnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAP/SURBVHhe7dZBjhRZDIThuRBrjjDchCNwTbbcZaBGXoRknuJlZmcV0bj1f1JI/WwnK2PVPw8AwAgcbAAYgoMNAENwsAFgCA42AAzBwQaAITjYADAEBxsAhuBgA8AQHGwAGIKDDQBDcLABYAgO9jv4/uPX4+u3n48vn/97/PuJkDmpna3drR1GHgc7rBadQ02mp3aYo53HwQ6rXyfuPwAh01K7jCwOdhi/rslHSe0ysjjYYW7xCZkaZHGww9zSEzI1yOJgh7mlJ2RqkMXBDnNLT8jUIIuDHeaWnpCpQRYHO8wtPSFTgywOdphbekKmBlkc7DC39IRMDbI42GFu6QmZGmRxsMPc0hMyNcjiYIe5pSdkapDFwQ5zS0/I1CCLgx3mlp78HnE98ncFWRzsMLf0r8qOmz2KuF6PuF5FXO8o4np/WzrXr4jrTQ+yONhhbumfzRn3zVHE9XrE9Srieh8lnetXxPWmB1kc7DC39M+k2/Vd/Sjiej3iehVxvY+S1dGM600PsjjYYW7pn4m43i6ro17p/R5xvYq490oz65yry93+lb9F3+4i69+7GVcX1zuaW6l+tf+KIIuDHeaW/m7E9XbZOer373vE9Sqyvnd23+2+PeuXs5mjb6X/G2uk/112M2ttddYvz3yv/quCLA52mFv6u5FdXdZ6n3V16TMu4noVWd/lSu1opqd7a+2ts2tk9z6qre+yvourld2sqL/OrfVngiwOdphb+ruRXV129dU6p/cu4noV2b13ddm918hZXfrMnXqPHNWkz/R6t/b6/NX6mfXbZ4IsDnaYW/q7EderyPre2X23i7heRXbvXV127zVyVpc+c6feI0d1cf3V2u/fXK2fWb99JsjiYIe5pb+b7qi/e+8irtcjrleR3XtXl917jZzVpc/cqffIUV1cb1eTPnO1LuvMnwiyONhhbumfSbfrre+yzq3v0msu3ZWe9DlXl/VdVOvprtT0vlvvkaOerHU3ezRztd6tM/39iiCLgx3mlv7ZnLkyezTTe2vOuNlec3VxM91Zv7iZXrtT7xHXq3Sutlpn9H5rfad/84ogi4Md5pb+Fdm5Mns24/o9O7u5s7r0mV6Xu/1n6z3iepXuqC5rX+879VXvvSrI4mCHuaUnZGqQxcEOc0tPyNQgi4Md5paekKlBFgc7zC09IVODLA52mFt6QqYGWRzsMLf0hEwNsjjYYW7pCZkaZHGww9zSEzI1yOJgh7mlJ2RqkMXBDnNLT8jUIIuDHeaWnpCpQRYHO+zLZ7/4hExL7TKyONhhX7/9tMtPyLTULiOLgx32/ccvfmWT8akdrl1GFgf7HdSi168TDjeZltrZ2l2O9fvgYAPAEBxsABjh8fgff6iWAtIJ5jIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NGetText DisplayName="Get Text 'This is'" sap:VirtualizedContainerService.HintSize="358,157.333333333333" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="589175ad-fcf3-4cfb-a8d3-5995b10c0f0d" Version="V1">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.rpasamples.com/findunicornname" DesignTimeRectangle="821, 612, 226, 23" ElementType="Text" FriendlyName="'Moonbeam Summer-Dancer'" FullSelectorArgument="&lt;webctrl id='lblUnicornName' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='lblUnicornName' tag='DIV' type='' /&gt;" Guid="b1a11794-6da0-42eb-ad89-8ced32288a7c" InformativeScreenshot="bd775fccd9685a1a78008747d526a9fa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Find Unicorn Name' /&gt;" SearchSteps="FuzzySelector">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="822, 561, 184, 21" ElementType="Text" FriendlyName="'This is'" FullSelectorArgument="&lt;webctrl parentid='outputBlock' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='outputBlock' tag='SPAN' type='' aaname='This is your unicorn name' check:text='This is your unicorn name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALwAAAAZCAYAAACLmET2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAH+SURBVHhe7ZaBasNADEP3a/3/j+rwQMMI+eLLZRnN6UGglp4HC6b0623MRvjgzVb44M1W+ODNVvjgzVb44M1W+ODNVkwf/Ov1+nlGdJyKld0n4/dyDb8HjxfafUZ0nIqV3Sfj93IN5Td89YL94s0n44M3W7F08PjM3ijLj0J1eUf1wUyOTHWByjnLM3cZ1XGWZ3zOfaCyIPsrfecz5oruTu64zxk7eUbGHDmnDz53s3PAM1jdZdRuzngOOhlm9hjlcIZZZYDnQGUZ7pWPrJMrL7OyAzB3s0wnu+QnDWdH84i/3OUZdLyOo1AeZ2ccnpmq57zrBZULrthRfidTTsD5rQfPuYKdvJdzBTtHM+h4HUehPM7OODwzVc951wsqF3R3kOUH8Bx0MszVA245eIC86oOqy3uqB7ljr9rlXHkdR6E8zs44PDNVz3nXCyoXdHZm56CTKUdx68GDUb+yG6BXnsoCzpXXcRTK4+yMwzNT9Zx3vaByQWdndg46mXIUt/2kyXCfWdkFI4c75VaOyo6o9lSWOeMw3CtfZcGMCzo7s3OwmmX+5Td87hju8w53FUde/luVxz27PI+AC593eQ46ToB8tWdUXrmgu4MsP4DnoJsFyPOTKQ/+k1H/qDHBYw/eGMXjDt7f7mbEYw4eh+5jNyMe+ZPGmAofvNmI9/sbjiq2cCOoPm8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                              <uix:NGetText.Text>
+                                <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("Unicorn Name")]</OutArgument>
+                              </uix:NGetText.Text>
+                            </uix:NGetText>
                           </Sequence>
                         </ActivityAction>
                       </ueab:ExcelForEachRowX.Body>
