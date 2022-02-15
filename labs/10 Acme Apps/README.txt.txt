@@ -7,3 +7,8 @@ https://acme-test.uipath.com/first-automation
 2. For each file, look at the discount the client should get based on their ID. 
 3. Copy the discount and correct the invoice.
 4. Generate a PDF invoice and email it.
+
+
+https://acme-test.uipath.com/reboot-your-skills
+http://quotes.toscrape.com/
+https://www.rpasamples.com/
