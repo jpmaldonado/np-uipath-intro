@@ -15,7 +15,9 @@
 - ACME Apps Exercise (`labs/10 Acme Apps`).
 
 **Day 3:**
+- UiPath Architecture
 - Power Point Automation (`demos/Day 3/PowerPoint Automation`).
+- PDF Automation (`labs/11 PDFForms`).
 - Excel Automation (`demos/Day 3/Excel Automation`).
 - Sample Case Studies (`demos/Day 3/Sample Case Studies`).
 
